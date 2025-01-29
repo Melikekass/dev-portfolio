@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+  --dot-color: #5d5d5d;
+  --bg-color: #FAF8F1;
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -15,7 +17,156 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  background-color: var(--bg-color);
+  background-image:
+    radial-gradient(var(--dot-color) 1px,
+      transparent 1px);
+  background-size: 25px 25px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.retro-card {
+  image-rendering: pixelated;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.retro-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px rgba(184, 92, 56, 1);
+}
+
+.retro-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(45deg,
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.05) 2px,
+      transparent 2px,
+      transparent 4px);
+  pointer-events: none;
+}
+
+
+.filter-pixel {
+  image-rendering: pixelated;
+}
+
+.pixel-text {
+  text-shadow: 2px 2px 0px rgba(184, 92, 56, 1);
+}
+
+.skill-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 2px,
+      transparent 4px);
+  pointer-events: none;
+}
+
+.arcade-cabinet {
+  position: relative;
+  padding: 20px;
+}
+
+.screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.screen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(0deg,
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px,
+      transparent 2px);
+  pointer-events: none;
+}
+
+.arcade-btn {
+  position: relative;
+  transition: all 0.2s;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.arcade-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(45deg,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1) 2px,
+      transparent 2px,
+      transparent 4px);
+  pointer-events: none;
+}
+
+.contact-card:hover svg {
+  filter: drop-shadow(2px 2px 0px rgba(184, 92, 56, 0.5));
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+.contact-card svg {
+  transition: all 0.3s ease;
+}
+
+.skill-category {
+  border-left: 4px solid theme('colors.retro-yellow');
+  padding-left: 1rem;
+  margin: 2rem 0;
+}
+
+.skill-category-title {
+  font-family: 'Press Start 2P';
+  color: theme('colors.retro-yellow');
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 2px,
+      transparent 4px);
+  pointer-events: none;
+}
+
+.pixel-text {
+  text-shadow: 4px 4px 0px rgba(184, 92, 56, 1);
 }

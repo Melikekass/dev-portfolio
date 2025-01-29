@@ -1,15 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './app/**/*.{js,ts,jsx,tsx}', // Next.js 13+ için app klasörünü ekleyin
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'retro-yellow': '#FFD700',
+        'retro-green': '#006400',
+        'retro-brown': '#8B4513',
+        'retro-beige': '#F5F5DC',
+      },
+      fontFamily: {
+        'retro': ['"Press Start 2P"', 'cursive'],
       },
     },
   },
