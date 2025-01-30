@@ -33,7 +33,7 @@ const projects = [
     description:
       "Yaz stajı döneminde mevcut CRM projesine geliştirici olarak katkıda bulundum.",
     tags: ["C#", "ASP.NET Core MVC", "Bootstrap"],
-    type: "İş Yazılımı",
+    type: "CRM",
   },
   {
     id: 5,

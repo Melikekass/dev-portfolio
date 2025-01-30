@@ -2,6 +2,7 @@
 import './globals.css';
 import useSound from 'use-sound';
 import RetroPlayer from './components/RetroPlayer';
+import { metadata } from './metadata';
 
 export default function RootLayout({ children }) {
   const [playClick] = useSound('/sounds/click.wav', { volume: 0.5 });
@@ -22,6 +23,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
         <link 
           href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" 
           rel="stylesheet" 
