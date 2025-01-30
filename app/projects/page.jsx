@@ -41,7 +41,7 @@ const projects = [
     description: "Kişisel portfolio websitesi.",
     tags: ["Next.js", "React", "Tailwind CSS"],
     type: "Kişisel",
-    link: "https://dev-portfolio-melikekass-projects.vercel.app"
+    link: "https://melikekas.vercel.app"
   },
 ];
 
